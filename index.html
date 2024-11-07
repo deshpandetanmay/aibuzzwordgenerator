@@ -71,4 +71,159 @@
         td {
             white-space: pre-wrap; /* Ensures each item appears on a new line */
         }
-        footer 
+        footer {
+            margin-top: 20px;
+            font-size: 1em;
+        }
+        footer a {
+            color: #ff9800;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .tagline {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            color: #ff9800;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="tagline">
+        Command the room and elevate your reputation with AI products. Impress your peers and shine at your next big meeting...
+    </div>
+
+    <div class="container">
+        <h1>AI Buzzword Generator</h1>
+        <div id="output">Press the button to generate AI jargon</div>
+        <button onclick="generateBuzzword()">Generate</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Key Terms</th>
+                <th>Adjectives/Modifiers</th>
+                <th>Common Phrases</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="keyTermsList"></td>
+                <td id="adjectivesList"></td>
+                <td id="phrasesList"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <footer>
+        Created by <a href="https://x.com/StuffTechTanmay" target="_blank">Tanmay Deshpande</a>
+    </footer>
+
+    <script>
+        const keyTerms = [
+            "Quantum-driven", 
+            "Cognitive computing", 
+            "Neural enhancement", 
+            "Autonomous decision-making", 
+            "Hyperparameter optimization", 
+            "Self-learning systems", 
+            "Data-centric models", 
+            "AI-first architecture", 
+            "Multi-layered algorithms", 
+            "Federated learning protocols", 
+            "Ethical alignment", 
+            "Explainable AI (XAI)", 
+            "Generative adversarial networks (GANs)", 
+            "Predictive analytics", 
+            "Transfer learning", 
+            "Zero-shot learning", 
+            "Natural language processing (NLP)", 
+            "Deep learning paradigms", 
+            "Reinforcement learning loops", 
+            "AI governance frameworks", 
+            "Scalable AI pipelines", 
+            "Synthetic data generation", 
+            "Robust model interpretability", 
+            "Vision-based AI", 
+            "Pre-trained transformers", 
+            "Data lake integration", 
+            "Advanced feature engineering", 
+            "Model drift correction", 
+            "Multi-modal data fusion", 
+            "Distributed machine learning", 
+            "Human-in-the-loop (HITL)", 
+            "Continuous deployment of ML", 
+            "Cloud-native AI solutions", 
+            "Bayesian inference", 
+            "Augmented intelligence", 
+            "Semi-supervised learning", 
+            "High-dimensional data synthesis", 
+            "Edge computing synergy", 
+            "AI-driven anomaly detection", 
+            "Behavioral analytics", 
+            "Meta-learning strategies", 
+            "Data augmentation techniques", 
+            "Semantic understanding", 
+            "Swarm intelligence", 
+            "Knowledge graph embeddings", 
+            "Dynamic AI orchestration", 
+            "Privacy-preserving AI", 
+            "Automated model tuning", 
+            "Cognitive AI workflows", 
+            "Embedded AI processors", 
+            "Cross-domain adaptability", 
+            "Spatiotemporal analysis",
+            "Smart contract integration",
+            "Autonomous systems management",
+            "Neural architecture search",
+            "Algorithmic transparency",
+            "AI-powered robotics",
+            "Virtual agent collaboration",
+            "Scalable inference engines",
+            "Natural language generation (NLG)",
+            "Algorithmic trading models",
+            "Predictive maintenance solutions",
+            "Cognitive automation",
+            "Agentic Framework"
+        ];
+
+        const supportingAdjectives = [
+            "Seamless", "Ultra-efficient", "Disruptive", "Proactive", "Scalable", 
+            "High-performance", "Future-proof", "Real-time", "Hybrid", "Intelligent",
+            "Strategic", "Adaptive", "Visionary", "Innovative", "Cutting-edge",
+            "Groundbreaking", "Advanced", "Robust", "Automated", "Sophisticated",
+            "Efficient", "Dynamic", "Customizable", "Responsive", "Agile",
+            "Comprehensive", "Intuitive", "Transformative", "Revolutionary"
+        ];
+
+        const commonPhrases = [
+            "leveraging quantum-driven neural networks for robust data analysis",
+            "integrating hyperparameter optimization with scalable AI pipelines",
+            "autonomously improving through multi-modal data fusion",
+            "pioneering ethical alignment within cognitive AI frameworks",
+            "enhancing explainable AI with cross-domain adaptability"
+        ];
+
+        function generateBuzzword() {
+            const randomKeyTerm = keyTerms[Math.floor(Math.random() * keyTerms.length)];
+            const randomAdjective = supportingAdjectives[Math.floor(Math.random() * supportingAdjectives.length)];
+            const randomPhrase = commonPhrases[Math.floor(Math.random() * commonPhrases.length)];
+
+            const buzzword = `${randomAdjective} ${randomKeyTerm} ${randomPhrase}`;
+            document.getElementById('output').innerText = buzzword;
+        }
+
+        function displayLists() {
+            document.getElementById('keyTermsList').innerText = keyTerms.join("\n");
+            document.getElementById('adjectivesList').innerText = supportingAdjectives.join("\n");
+            document.getElementById('phrasesList').innerText = commonPhrases.join("\n");
+        }
+
+        // Display the lists when the page loads
+        window.onload = displayLists;
+    </script>
+</body>
+</html>
