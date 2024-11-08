@@ -25,6 +25,7 @@
             background-color: #121212;
             color: #e0e0e0;
             padding: 20px;
+            box-sizing: border-box;
         }
         .container {
             text-align: center;
@@ -34,9 +35,12 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
             margin-bottom: 20px;
             border: 2px solid #3f51b5;
+            width: 100%;
+            max-width: 600px;
         }
         h1 {
             color: #ff9800;
+            font-size: 1.8em;
         }
         #output {
             margin: 20px 0;
@@ -44,8 +48,9 @@
             border: 1px solid #3f51b5;
             border-radius: 10px;
             background: #30344b;
-            font-size: 1.2em;
+            font-size: 1.1em;
             color: #76ff03;
+            word-wrap: break-word;
         }
         button {
             padding: 12px 24px;
@@ -56,6 +61,8 @@
             cursor: pointer;
             font-size: 1em;
             transition: background-color 0.3s, transform 0.2s;
+            width: 100%;
+            max-width: 200px;
         }
         button:hover {
             background-color: #76ff03;
@@ -69,11 +76,14 @@
             background: #1f1f2e;
             border: 2px solid #3f51b5;
             color: #e0e0e0;
+            max-width: 100%;
+            overflow-x: auto;
         }
         th, td {
             border: 1px solid #30344b;
             padding: 10px;
             vertical-align: top;
+            font-size: 0.9em;
         }
         th {
             background-color: #3f51b5;
@@ -98,6 +108,25 @@
             font-size: 1.1em;
             color: #ff9800;
             text-align: center;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            #output {
+                font-size: 1em;
+            }
+            button {
+                font-size: 0.9em;
+                max-width: 100%;
+            }
+            th, td {
+                font-size: 0.8em;
+                padding: 8px;
+            }
         }
     </style>
 </head>
@@ -212,7 +241,7 @@
 
         const commonPhrases = [
             "leveraging quantum-driven neural networks for robust data analysis",
-            "autonomously improving through multi-modal data",
+            "autonomously improving through multi-modal data fusion",
             "pioneering ethical alignment within cognitive AI frameworks",
             "enhancing explainable AI with cross-domain adaptability",
             "harnessing the power of scalable data models",
@@ -250,4 +279,12 @@
 
         function displayLists() {
             document.getElementById('keyTermsList').innerText = keyTerms.join("\n");
-           
+            document.getElementById('adjectivesList').innerText = supportingAdjectives.join("\n");
+            document.getElementById('phrasesList').innerText = commonPhrases.join("\n");
+        }
+
+        // Display the lists when the page loads
+        window.onload = displayLists;
+    </script>
+</body>
+</html>
