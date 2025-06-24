@@ -34,41 +34,48 @@
       gtag('config', 'G-PTX9KS5EYJ');
     </script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet">
+
     <style>
         body {
-            font-family: 'Courier New', Courier, monospace;
+            font-family: 'Roboto', Arial, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
             margin: 0;
-            background-color: #121212;
-            color: #e0e0e0;
+            background-color: #f4f6f8;
+            color: #333;
             padding: 20px;
             box-sizing: border-box;
+            line-height: 1.6;
         }
         .container {
             text-align: center;
-            background: #1f1f2e;
+            background: #ffffff;
             padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
-            border: 2px solid #3f51b5;
+            border: 1px solid #ddd;
             width: 100%;
             max-width: 600px;
         }
         h1 {
-            color: #ff9800;
-            font-size: 1.8em;
+            font-family: 'Montserrat', sans-serif;
+            color: #3f51b5;
+            font-size: 2em;
+            margin-top: 0;
         }
         #output {
             margin: 20px 0;
             padding: 15px;
-            border: 1px solid #3f51b5;
-            border-radius: 10px;
-            background: #30344b;
+            border: 1px solid #c5cae9;
+            border-radius: 5px;
+            background: #e8eaf6;
             font-size: 1.1em;
-            color: #76ff03;
+            color: #3f51b5;
             word-wrap: break-word;
         }
         button {
@@ -76,7 +83,7 @@
             background-color: #3f51b5;
             color: #fff;
             border: none;
-            border-radius: 10px;
+            border-radius: 5px;
             cursor: pointer;
             font-size: 1em;
             transition: background-color 0.3s, transform 0.2s;
@@ -84,29 +91,28 @@
             max-width: 200px;
         }
         button:hover {
-            background-color: #76ff03;
-            color: #121212;
+            background-color: #303f9f;
             transform: translateY(-3px);
         }
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
-            background: #1f1f2e;
-            border: 2px solid #3f51b5;
-            color: #e0e0e0;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            color: #333;
             max-width: 100%;
             overflow-x: auto;
         }
         th, td {
-            border: 1px solid #30344b;
+            border: 1px solid #ddd;
             padding: 10px;
             vertical-align: top;
             font-size: 0.9em;
         }
         th {
-            background-color: #3f51b5;
-            color: #ffffff;
+            background-color: #f5f5f5;
+            color: #333;
         }
         td {
             white-space: pre-wrap; /* Ensures each item appears on a new line */
@@ -116,7 +122,7 @@
             font-size: 1em;
         }
         footer a {
-            color: #ff9800;
+            color: #3f51b5;
             text-decoration: none;
         }
         footer a:hover {
@@ -125,7 +131,7 @@
         .tagline {
             margin-bottom: 20px;
             font-size: 1.1em;
-            color: #ff9800;
+            color: #555;
             text-align: center;
         }
         @media (max-width: 600px) {
@@ -133,7 +139,7 @@
                 padding: 10px;
             }
             h1 {
-                font-size: 1.5em;
+                font-size: 1.6em;
             }
             #output {
                 font-size: 1em;
